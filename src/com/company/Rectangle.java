@@ -6,6 +6,11 @@ public class Rectangle {
     double y;
     double sqr;
 
+    private static int createdRectangles = 0;
+    private final String RUSSIAN_CLASS_NAME = "Прямоугольник";
+    private final String ENGLISH_CLASS_NAME = "Rectangle";
+
+
     public Rectangle(double x, double y) {
         this.x = x;
         this.y = y;
@@ -33,11 +38,22 @@ public class Rectangle {
         }
     }
 
+    public int getCreatedRectangles() {
+        return createdRectangles++;
+    }
+
     public boolean isTheSameRectangle(Rectangle rectangle) {
         if (this.x == rectangle.x && this.y == rectangle.y) {
             return true;
         } else {
             return false;
         }
+
     }
+
+    public static void printRectanglesCount() {
+        System.out.println("Всего было создано " + createdRectangles + " прямоугольников");
+    }
+
 }
+
