@@ -23,6 +23,7 @@ public class Main {
         System.out.println("Равенство прямоугольников - " + g);
         System.out.println();
         Rectangle.printRectanglesCount();
+        Rectangle.printClassName(false);
 
     }
 }
